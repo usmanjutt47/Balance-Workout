@@ -40,7 +40,7 @@ const SelectYourActivityLevel = () => {
             wrapperBackground="transparent"
           />
         </View>
-        <Buttons nextPath="ProfilePicture" />
+        <Buttons nextPath="UploadPicture" />
       </ImageBackground>
     </View>
   );
