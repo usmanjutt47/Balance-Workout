@@ -19,6 +19,8 @@ import Profile from "./src/screen/DrawerScreens/Profile";
 import Setting from "./src/screen/DrawerScreens/Setting";
 import Explore from "./src/screen/DrawerScreens/Explore";
 import Challenges from "./src/screen/Challenges";
+import StartNow from "./src/screen/StartNow";
+import ActiveWorkout from "./src/screen/ActiveWorkout";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -84,7 +86,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Challenges"
+        initialRouteName="Login"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Login" component={Login} />
@@ -97,6 +99,8 @@ const App = () => {
         <Stack.Screen name="SelectGoal" component={SelectGoal} />
         <Stack.Screen name="UploadPicture" component={UploadPicture} />
         <Stack.Screen name="Challenges" component={Challenges} />
+        <Stack.Screen name="StartNow" component={StartNow} />
+        <Stack.Screen name="ActiveWorkout" component={ActiveWorkout} />
         <Stack.Screen
           name="SelectYourActivityLevel"
           component={SelectYourActivityLevel}
