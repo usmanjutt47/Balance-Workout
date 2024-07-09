@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   View,
   Text,
@@ -12,16 +12,25 @@ import {
 } from "react-native";
 import CircularProgress from "react-native-circular-progress-indicator";
 import { Feather } from "@expo/vector-icons";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 const { width } = Dimensions.get("window");
 
 const Home = () => {
+  const navigation = useNavigation();
   const [value, setValue] = useState(0);
   const [activePressable, setActivePressable] = useState(null);
 
   const handlePressablePress = (index) => {
     setActivePressable(index);
+    navigation.navigate("Challenges");
   };
+
+  useFocusEffect(
+    useCallback(() => {
+      setActivePressable(null);
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
