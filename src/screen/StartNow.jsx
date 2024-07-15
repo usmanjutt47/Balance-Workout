@@ -74,6 +74,7 @@ export default function StartNow({ visible, onClose }) {
               </Text>
             </Pressable>
           </View>
+          
         </View>
       </Modal>
     </View>
