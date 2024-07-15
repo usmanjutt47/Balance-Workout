@@ -2,25 +2,25 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome6, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Login from "./src/screen/Login";
 import SignUp from "./src/screen/SignUp";
 import SelectGender from "./src/screen/SelectGender";
 import SelectAge from "./src/screen/SelectAge";
-import Home from "./src/screen/DrawerScreens/Home";
 import SelectWeight from "./src/screen/SelectWeight";
 import SelectHeight from "./src/screen/SelectHeight";
 import SelectGoal from "./src/screen/SelectGoal";
 import SelectYourActivityLevel from "./src/screen/SelectYourActivityLevel";
 import UploadPicture from "./src/screen/UploadPicture";
-import Workout from "./src/screen/DrawerScreens/Workout";
-import Profile from "./src/screen/DrawerScreens/Profile";
-import Setting from "./src/screen/DrawerScreens/Setting";
-import Explore from "./src/screen/DrawerScreens/Explore";
+import Profile from "./src/screen/TabScreens/Profile";
+import Setting from "./src/screen/TabScreens/Setting";
+import Explore from "./src/screen/TabScreens/Explore";
 import Challenges from "./src/screen/Challenges";
 import StartNow from "./src/screen/StartNow";
 import ActiveWorkout from "./src/screen/ActiveWorkout";
+import Workout from "./src/screen/TabScreens/Workout";
+import Home from "./src/screen/TabScreens/Home";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -101,6 +101,7 @@ const App = () => {
         <Stack.Screen name="Challenges" component={Challenges} />
         <Stack.Screen name="StartNow" component={StartNow} />
         <Stack.Screen name="ActiveWorkout" component={ActiveWorkout} />
+        <Stack.Screen name="Workout" component={Workout} />
         <Stack.Screen
           name="SelectYourActivityLevel"
           component={SelectYourActivityLevel}
